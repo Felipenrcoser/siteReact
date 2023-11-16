@@ -1,0 +1,86 @@
+body{
+    background-image: url('./img/content-licensing-agreement-explained-stock-images-copyright.b90e3287.png') ;
+    display: flexbox;
+    background-position: center;
+    min-width: 300px;
+  
+
+}
+
+/* Tela de login*/
+.loginScreen{
+    max-width: 800px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    margin: 50px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.loginData{
+    box-sizing: border-box;
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+
+.loginData p{
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+
+}
+
+.loginData input{
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.loginData button{
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Home */
+.sidebar {
+    height: 100%;
+    width: 240px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    margin-top: 0;
+    padding-left: 10px;
+    padding-top: 100px;
+
+}
+
+.sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.home{
+    max-width: 800px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    margin-left: 260px;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    min-width: 300px;
+}
