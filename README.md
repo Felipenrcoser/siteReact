@@ -11,7 +11,7 @@ Projeto de site para controle de mateial de escritorio utilizando:
 npm create vite@latest
 cd pasta-com-o-nome-do-projeto
 npm install react-router-dom
-run dev
+npm run dev
 
 2 - Importante
 import { createBrowserRouter, RouterProvider, useOutlet, useParams } from 'react-router-dom' | Criar o roteamento entre as paginas.

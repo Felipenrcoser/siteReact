@@ -75,12 +75,20 @@ body{
 }
 
 .home{
-    max-width: 800px;
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
-    margin-left: 260px;
+    margin-left: 300px;
     margin-top: 50px;
     padding-bottom: 10px;
     border-radius: 10px;
-    min-width: 300px;
+    width: calc(80% - 10px);
+    
+
+}
+
+.entrada,
+.saida,
+.requisicao,
+.cadastro {
+    padding: 10px 10px 10px 20px;
 }
