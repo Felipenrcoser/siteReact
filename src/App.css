@@ -2,7 +2,7 @@ body{
     background-image: url('./img/content-licensing-agreement-explained-stock-images-copyright.b90e3287.png') ;
     display: flexbox;
     background-position: center;
-    min-width: 300px;
+    min-width: 500px;
   
 
 }
@@ -82,7 +82,7 @@ body{
     padding-bottom: 10px;
     border-radius: 10px;
     width: calc(80% - 10px);
-    
+    min-width: 300px;
 
 }
 

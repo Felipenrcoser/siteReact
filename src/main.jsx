@@ -8,6 +8,7 @@ import Saida from './components/Saida';
 import Cadastro  from './components/Cadastro';
 import Requisicao from './components/Requisicao';
 import ErrorPage from './components/erro.jsx';
+import HomeLogin from './components/homeLogin.jsx';
 
 //------------------------------------------------------------------------------------------------------------------
 
@@ -33,7 +34,7 @@ const router1 = createBrowserRouter([
   {
     path: '/', element: <Home/>, errorElement: <ErrorPage />, children:
     [
-      {path: 'home', element: <Home/>},
+      {path: 'home', element: <HomeLogin/>},
       {path: 'entrada', element: <Entrada/>},
       {path: 'saida', element: <Saida/>},
       {path: 'cadastro', element: <Cadastro/>},
