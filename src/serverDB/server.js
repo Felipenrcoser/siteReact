@@ -23,13 +23,13 @@ connection.connect((err) => {
         //console.log('Resultados da consulta:', results);
         const objetoResultado = [];
         if (results.length > 0) {
-            for(let ii = 0; ii <= results.length; ii++){
+            for(let ii = 0; ii < results.length; ii++){
                 objetoResultado.push(results[ii]);
             }
             }else{
                 null;
             };
-        console.log('Resultado como objeto:', objetoResultado);
+        console.log('Resultado como objeto:', objetoResultado[0].nomeUsuario);
     });
     
     connection.end();
