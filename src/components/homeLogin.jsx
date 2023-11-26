@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function HomeLogin() {
+const HomeLogin = () => {  
 
     return (
         <div className="saida">
@@ -10,6 +10,6 @@ function HomeLogin() {
         </div>
       
     )
-  }
+}
   
-  export default HomeLogin
+export default HomeLogin
