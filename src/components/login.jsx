@@ -50,14 +50,14 @@ function Login() {
       <h1>Plataforma GME</h1>
       <div className="loginData">
         <form onSubmit={handleSubmit}>
-          <p>Digite o usuário:</p>
+          <p>Usuário:</p>
           <input
             type="text"
             value={user}
             onChange={(e) => setUser(e.target.value)}
             placeholder="Digite seu usuário..."
           />
-          <p>Digite a senha:</p>
+          <p>Senha:</p>
           <input
             type="password"
             value={password}

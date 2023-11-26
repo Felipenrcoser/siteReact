@@ -4,7 +4,6 @@ import { Outlet } from "react-router-dom";
 
 
 function Home() {
-  console.log(<Outlet />);
   return (
     <div className="home">
      <CriaSidebar />

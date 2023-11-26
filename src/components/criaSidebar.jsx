@@ -16,12 +16,12 @@ function CriaSidebar() {
 
     return (
         <div className="sidebar">
-            <Link to='/home'>Home</Link>
-            <Link to='/entrada'>Entrada</Link>
-            <Link to='/saida'>Saida</Link>
-            <Link to='/cadastro'>Cadastro</Link>
-            <Link to='/requisicao'>Requisição</Link>
-            <Link to='/' onClick={handleLogout}>Logout</Link>
+            <Link to='/home'><strong>Home</strong></Link>
+            <Link to='/entrada'><strong>Entrada</strong></Link>
+            <Link to='/saida'><strong>Saida</strong></Link>
+            <Link to='/cadastro'><strong>Cadastro</strong></Link>
+            <Link to='/requisicao'><strong>Requisição</strong></Link>
+            <Link to='/' onClick={handleLogout}><strong>Logout</strong></Link>
         </div>
     )
 }
