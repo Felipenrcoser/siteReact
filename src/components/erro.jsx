@@ -7,10 +7,10 @@ export default function ErrorPage() {
     console.error(error);
   
     return (
-      <div className="home">
-        <h1>Oops!</h1>
-        <p>Página indisponivel ...</p>
-        <Link to='/'>Voltar</Link>
+      <div className="erro home">
+        <h1>Ooooops!</h1>
+        <p>Página que tentou acessar está indisponivel!</p>
+        <Link to='/'><button className='btn-erro'>Voltar</button></Link>
 
       </div>
     );

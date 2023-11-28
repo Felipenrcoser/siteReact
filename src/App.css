@@ -127,6 +127,35 @@ body{
 .entrada,
 .saida,
 .requisicao,
-.cadastro {
+.cadastro,
+.erro,
+.homeLogin {
     padding: 10px 10px 10px 20px;
+}
+
+.erro{
+    text-align: center;
+}
+
+.erro p{
+    font-size: 25px;
+}
+
+.erro h1{
+    font-size: 40px;
+}
+
+.btn-erro{
+    width: 30%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052; 
 }

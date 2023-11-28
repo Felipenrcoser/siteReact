@@ -3,6 +3,8 @@ import mysql from 'mysql';
 
 const consultaSQLProdutosFaltantes = 'select * from estoque e, quantidadedesejada q where e.idEmpresaRef = q.idEmpresaRef and e.idProdutoRef = q.idProdutoRef and e.quantidadeProduto < q.quantidadeDesejada';
 
+const objetoResultado = [];
+
 const connection = mysql.createConnection({
     host: '127.0.0.1',
     port: '3306',
@@ -11,7 +13,7 @@ const connection = mysql.createConnection({
     database: 'tccgme'
 });
 
-connection.connect((err) => {
+function consulta () {connection.connect((err) => {
     if (err) {
         console.error('Erro ao conectar ao banco de dados:', err);
         return;
@@ -23,7 +25,6 @@ connection.connect((err) => {
             console.error('Erro ao executar a consulta:', err);
             return;
         }
-        const objetoResultado = [];
         if (results.length > 0) {
             for(let ii = 0; ii < results.length; ii++){
                 objetoResultado.push(results[ii]);
@@ -32,7 +33,18 @@ connection.connect((err) => {
                 null;
             };
         console.log(objetoResultado);
+        console.log('---------------------------');
+        for (let i of objetoResultado){
+            console.log('//////////////////////////');
+            for (let ii in i){
+                console.log(ii , i[ii]);
+            }
+        }
     });
     connection.end();
-});
 
+    return objetoResultado;
+});}
+
+const a123 = consulta();
+export {a123};
