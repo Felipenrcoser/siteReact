@@ -21,3 +21,11 @@ import React, { createContext, useContext, useState } from 'react' | Criar um co
 
 3 - Arquivo main.jsx
 Cria as duas rotas possiveis (antes e após o login) com o createBrowserRouter com o path (nome a ser atribuido a pagina) e element (nome da pagina importada).
+
+################################################################################################
+Restaurar Backup mysql (XAMPP)
+
+1 - Abrir o XAMPP
+2 - Ir em Shell
+3 - mysql -u root tccgme < tccgme.sql ("-u" informa o usuario | "-p" Informa a senha, neste caso não tem | "tccgme" nome da base de dados | "tccgme.sql" nome do arquivo de backup a ser restaurado)
+  OBS: Se não houver uma database com o nome informado, o processo não será realizado
