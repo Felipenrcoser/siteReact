@@ -1,12 +1,13 @@
 ///////////////////////////////////////
 import mysql from 'mysql';
 
-const cos = '';
+const consultaSQLProdutosFaltantes = 'select * from estoque e, quantidadedesejada q where e.idEmpresaRef = q.idEmpresaRef and e.idProdutoRef = q.idProdutoRef and e.quantidadeProduto < q.quantidadeDesejada';
 
 const connection = mysql.createConnection({
     host: '127.0.0.1',
     port: '3306',
-    user: 'root',
+    user: 'default',
+    password: '1senhadificil',
     database: 'tccgme'
 });
 
@@ -17,7 +18,7 @@ connection.connect((err) => {
     }
     console.log('Conexão bem-sucedida ao banco de dados MySQL!');
 
-    connection.query('select * from estoque e, quantidadedesejada q where e.idEmpresaRef = q.idEmpresaRef and e.idProdutoRef = q.idProdutoRef and e.quantidadeProduto < q.quantidadeDesejada', (err, results) => {
+    connection.query(consultaSQLProdutosFaltantes, (err, results) => {
         if (err) {
             console.error('Erro ao executar a consulta:', err);
             return;

@@ -27,5 +27,9 @@ Restaurar Backup mysql (XAMPP)
 
 1 - Abrir o XAMPP
 2 - Ir em Shell
-3 - mysql -u root tccgme < tccgme.sql ("-u" informa o usuario | "-p" Informa a senha, neste caso não tem | "tccgme" nome da base de dados | "tccgme.sql" nome do arquivo de backup a ser restaurado)
+3 - mysql -u root -p tccgme < tccgme.sql ("-u" informa o usuario | "-p" Informa a senha | "tccgme" nome da base de dados | "tccgme.sql" nome do arquivo de backup a ser restaurado)
   OBS: Se não houver uma database com o nome informado, o processo não será realizado
+
+
+Usuario: root senha: 1senhamaisdificil (Usuario para manipulação do banco de dados)
+Usuario: default senha: 1senhadificil (Usuario para usar na aplicação - permissão de select, update e insert apenas)
