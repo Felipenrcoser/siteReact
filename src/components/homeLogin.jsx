@@ -1,17 +1,14 @@
-import React, { useEffect } from "react";
+// HomeLogin.js
+import React from "react";
 
-//import {a123} from "../serverDB/server.js";
 
-
-const HomeLogin = () => {  
+const HomeLogin = () => { 
     return (
         <div className="homeLogin">
-            <h1>Seja bem vindo!</h1>
+            <h1>Seja bem vindo! Home</h1>
             <p>Aqui terá uma tela</p>
         </div>
-      
     )
 }
-
 
 export default HomeLogin;

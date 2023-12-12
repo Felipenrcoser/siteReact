@@ -159,3 +159,83 @@ body{
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #00ff8052; 
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+      
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  .mainTH{
+    background-color: black;
+    font-size: 25px;
+  }
+  
+  th {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .tables-container {
+    display: flex;
+    flex-wrap: wrap; /* Quebra para a linha abaixo se o espaço for insuficiente */
+  }
+  
+  .tables-container > * {
+    flex: 1; /* Cada tabela se expandirá para ocupar o espaço disponível */
+    margin-right: 20px; /* Espaçamento entre as tabelas (pode ajustar conforme necessário) */
+  }
+
+/*Estilo formulario cadastro*/
+  .formularioCadastro {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .formularioCadastro label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .formularioCadastro input[type="text"],
+  .formularioCadastro select {
+    width: calc(100% - 24px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .formularioCadastro button {
+    display: block; /* Garante que o botão ocupe toda a largura disponível */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .formularioCadastro button:hover {
+    background-color: #555;
+  }
+  
+  
