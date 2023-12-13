@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
 app.use(cors());
 app.use(express.json());
 
-// Rota para lidar com a inserção de produtos
+// Rota para lidar com a inserção de produtosa
 app.post('/api/novo-produto', (req, res) => {
   const { descProduto, unMedidaRef } = req.body;
 
@@ -32,6 +32,25 @@ app.post('/api/novo-produto', (req, res) => {
     res.status(200).send('Produto inserido com sucesso');
   });
 });
+
+// Rota para lidar com a atualização do estoque
+app.put('/api/atualizar-estoque', (req, res) => {
+  const { idProduto, quantidade } = req.body;
+
+  const updateQuery = `UPDATE estoque SET quantidadeProduto = quantidadeProduto - ? WHERE IDPRODUTOREF = ?`;
+  const values = [quantidade, idProduto]; 
+
+  connection.query(updateQuery, values, (error, results) => {
+    if (error) {
+      console.error('Erro ao atualizar estoque:', error);
+      res.status(500).send('Erro ao atualizar estoque');
+      return;
+    }
+    console.log('Estoque atualizado com sucesso:', results);
+    res.status(200).send('Estoque atualizado com sucesso');
+  });
+});
+
 
 const PORT = process.env.PORT || 3001; // Defina a porta para 3001
 

@@ -1,50 +1,42 @@
-//Importações iniciais
-//------------------------------------------------------------------------------------------------------------------
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
-//------------------------------------------------------------------------------------------------------------------
 
-//Função de autenticar o usuario e senha
-//------------------------------------------------------------------------------------------------------------------
 function Login() {
-  //Pega os dados de usuario e senha
-  const [user, setUser] = useState("");
-  const [password, setPassword] = useState("");
-  
-  //Usuarios permitidos
-  const acessoSistema = [
-  {userId: 'Felipe', passwordId: '1234'},
-  {userId: 'Robson', passwordId: '5678'},
-  {userId: 'Guilherme', passwordId: '1478'}
-  ];
-
-  //Importa a função do autenticador
+  const [user, setUser] = useState('');
+  const [password, setPassword] = useState('');
+  const [acessoSistema, setAcessoSistema] = useState([]);
   const { login } = useAuth();
-  
 
+  useEffect(() => {
+    fetch('http://localhost:3003/api/usuarios')
+      .then(response => response.json())
+      .then(data => {
+        const usuarios = data.map(usuario => ({
+          userId: usuario.NOMEUSUARIO,
+          passwordId: usuario.SENHAUSUARIO 
+        }));
+        setAcessoSistema(usuarios);
+        console.log(usuarios);
+      })
+      .catch(error => {
+        console.error('Erro ao buscar dados:', error);
+      });
+  }, []);
 
-  //Ao pegar o evento do formulario de login, faz a verificação para permitir acesso ou não
   const handleSubmit = (e) => {
-    e.preventDefault();  
-    if(user !== '' && password !==""){
-      const findUser = acessoSistema.some(objeto => objeto.userId === user);
-      if(findUser){
-        const findPassword = acessoSistema.some(objeto => objeto.passwordId === password);
-        if(findPassword) { 
-          login();
-        }else{ 
-          alert("Senha Incorreta!") 
-        };
-      }else{
-        alert("Usuário não localizado!")
+    e.preventDefault();
+    if (user !== '' && password !== '') {
+      const findUser = acessoSistema.find(objeto => objeto.userId === user && objeto.passwordId === password);
+      if (findUser) {
+        login();
+      } else {
+        alert('Usuário ou senha incorretos!');
       }
-    }else{
-      alert("Usuario ou senha não foi informado!")
+    } else {
+      alert('Usuário ou senha não foram informados!');
     }
-
   };
 
-  //Tela de login
   return (
     <div className="loginScreen">
       <h1>Plataforma GME</h1>
@@ -73,4 +65,3 @@ function Login() {
 }
 
 export default Login;
-//------------------------------------------------------------------------------------------------------------------
